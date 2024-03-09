@@ -55,6 +55,12 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":common"))
 
+    // Coroutines
+    implementation (libs.kotlinx.coroutines.android)
+
+    // LiveData
+    implementation(libs.androidx.runtime.livedata)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
