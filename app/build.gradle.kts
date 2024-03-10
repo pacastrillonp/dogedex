@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.daggerHilt)
+    alias(libs.plugins.ksp)
+    id ("kotlin-kapt")
 }
 
 android {
@@ -60,6 +63,10 @@ dependencies {
 
     // LiveData
     implementation(libs.androidx.runtime.livedata)
+
+    // DI
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
