@@ -5,8 +5,6 @@ import co.pacastrillonp.dogedex.common.network.DogsResponse
 import retrofit2.http.GET
 
 interface ApiService {
-
     @GET(DOGS)
-    suspend fun getAllDogs() : DogsResponse
-
+    suspend fun getAllDogs(): DogsResponse
 }

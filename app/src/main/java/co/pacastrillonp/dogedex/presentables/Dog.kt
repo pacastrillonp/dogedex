@@ -5,11 +5,11 @@ data class Dog(
     val index: Int,
     val name: String,
     val type: String,
-    val heightFemale: Double,
-    val heightMale: Double,
+    val heightFemale: String,
+    val heightMale: String,
     val imageUrl: String,
     val lifeExpectancy: String,
-    val temperature: String,
-    val weightFemale: Double,
-    val weightMale: Double
+    val temperament: String,
+    val weightFemale: String,
+    val weightMale: String
 )

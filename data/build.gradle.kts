@@ -49,8 +49,14 @@ dependencies {
     kapt(libs.hilt.compiler)
 
     // Retrofit2
-    implementation (libs.retrofit)
-    implementation (libs.converter.gson)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    // Decoding
+    implementation(libs.moshi)
+    //noinspection KaptUsageInsteadOfKsp
+    kapt(libs.moshi.kotlin.codegen)
+    implementation(libs.moshi.kotlin)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

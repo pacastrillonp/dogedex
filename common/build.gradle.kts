@@ -37,7 +37,9 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
-    implementation (libs.moshi)
+    // Retrofit2
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

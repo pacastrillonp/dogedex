@@ -5,7 +5,7 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class DogsResponse(
-    @Json(name = "data") val data: Data,
+    val message: String,
     @Json(name = "is_success") val isSuccess: Boolean,
-    @Json(name = "message") val message: String
+    val data: Data
 )
