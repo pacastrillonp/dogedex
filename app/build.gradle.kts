@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.daggerHilt)
-    alias(libs.plugins.ksp)
-    id ("kotlin-kapt")
+    alias(libs.plugins.hiltAndroidPlugin)
+    alias(libs.plugins.devtoolsKsp)
+    id("kotlin-kapt")
 }
 
 android {
@@ -58,15 +58,6 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":common"))
 
-    // Coroutines
-    implementation (libs.kotlinx.coroutines.android)
-
-    // LiveData
-    implementation(libs.androidx.runtime.livedata)
-
-    // DI
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -76,6 +67,17 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.android)
+
+    // LiveData
+    implementation(libs.androidx.runtime.livedata)
+
+    // DI
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

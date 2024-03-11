@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.daggerHilt)
-    alias(libs.plugins.ksp)
-    id ("kotlin-kapt")
+    alias(libs.plugins.hiltAndroidPlugin)
+    alias(libs.plugins.devtoolsKsp)
+    id("kotlin-kapt")
 }
 
 android {
@@ -39,13 +39,18 @@ dependencies {
 
     implementation(project(":common"))
 
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+
     // DI
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    // Retrofit2
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
