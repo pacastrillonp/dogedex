@@ -9,7 +9,7 @@ fun DogsResponse.dogsResponseToDogs(): List<Dog> {
             id = it.id,
             index = it.index,
             name = it.nameEn,
-            type = it.dogType ?: "",
+            type = it.dogType,
             heightFemale = it.heightFemale,
             heightMale = it.heightMale,
             imageUrl = it.imageUrl,

@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import co.pacastrillonp.dogedex.presentables.Dog
+import co.pacastrillonp.dogedex.ui.detail.DogDetailScreen
 import co.pacastrillonp.dogedex.ui.dogs.DogScreenViewModel
 import co.pacastrillonp.dogedex.ui.dogs.DogsScreen
 import co.pacastrillonp.dogedex.ui.theme.DogeDexTheme
@@ -34,7 +35,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    DogsScreen(dogs)
+                    if (dogs.isNotEmpty()) {
+                        DogDetailScreen(dog =dogs.first())
+                    }
+//                    DogsScreen(dogs)
                 }
             }
         }
