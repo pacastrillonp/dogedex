@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material3.CircularProgressIndicator
@@ -17,7 +18,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import co.pacastrillonp.dogedex.ui.theme.Purple40
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.ImagePainter
 import coil.compose.rememberImagePainter
@@ -37,7 +37,7 @@ fun LoadImageFromUrl(modifier: Modifier, imageUrl: String) {
             contentDescription = null,
             modifier = Modifier
                 .size(150.dp)
-                .clip(shape = RectangleShape),
+                .clip(shape = CircleShape),
             contentScale = ContentScale.Crop
         )
         when (painter.state) {
